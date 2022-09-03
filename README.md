@@ -18,4 +18,4 @@
 10. JS-функции
 
 
-#### Ссылка на GitHub: https://sofyajeune.github.io/yet-another-project-sofya/
+#### Ссылка на GitHub: https://sofyajeune.github.io/mesto/
