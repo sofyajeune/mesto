@@ -1,0 +1,17 @@
+.profile__element {
+    max-width: 11.72vw;
+    min-height: 3.91vw;
+    padding-left: 19vw;
+    margin-top: 2.34vw;
+}
+
+@media screen and (max-width: 500px) {
+    .profile__element {
+        max-width: 88.13vw;
+        min-height: 15.63vw;
+        margin: 16.56vw auto 0 auto;
+        padding-left: 0;
+
+
+    }
+}

@@ -1,0 +1,60 @@
+/* FONTS */
+@import url(../fonts/fonts.css);
+
+/* PAGE */
+@import url(../blocks/page/page.css);
+
+/* HEADER */
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__line/header__line.css);
+
+/*PROFILE*/
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__section/profile__section.css);
+@import url(../blocks/profile/__position/profile__position.css);
+@import url(../blocks/profile/__plus/profile__plus.css);
+@import url(../blocks/profile/__name/profile__name.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__element/profile__element.css);
+@import url(../blocks/profile/__button/profile__button.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__avatar-container/profile__avatar-container.css);
+
+/* ELEMENTS */
+@import url(../blocks/elements/elements.css);
+@import url(../blocks/elements/__text/elements__text.css);
+@import url(../blocks/elements/__photo/elements__photo.css);
+@import url(../blocks/elements/__heart/elements__heart.css);
+@import url(../blocks/elements/__flex/elements__flex.css);
+@import url(../blocks/elements/__cards/elements__cards.css);
+@import url(../blocks/elements/__card/elements__card.css);
+
+/* FOOTER */
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+
+/*POPUP*/
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__save/popup__save.css);
+@import url(../blocks/popup/__position/popup__position.css);
+@import url(../blocks/popup/__link/popup__link.css);
+@import url(../blocks/popup/__input/poup__input.css);
+@import url(../blocks/popup/__content/popup__content.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__close/popup__close.css);
+@import url(../blocks/popup/__close-button/popup__close-button.css);
+@import url(../blocks/popup/__author/popup__author.css);
+
+
+
+
+
+
+
+
+
+
+
+

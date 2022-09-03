@@ -1,0 +1,20 @@
+.profile__plus {
+    max-width: 1.72vw;
+    min-height: 1.72vw;
+    padding: 1.09vw 5vw 1.09vw 5vw;
+    border: 1px solid #FFFFFF;
+
+}
+
+.profile__plus:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 500px) {
+    .profile__plus {
+        max-width: 5vw;
+        padding: 5.31vw 41.25vw 5.31vw 41.25vw;
+
+
+    }
+}

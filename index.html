@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./vendor/normalize.css">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Mesto</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <img class="header__logo" src="./images/header__logo.svg" alt="">
+        <img class="header__line" src="./images/header__line.svg" alt="">
+    </header>
+    <main>
+        <section class="profile">
+            <div class="profile__avatar-container"><img class="profile__avatar" src="./images/profile__avatar.png"
+                    alt="">
+            </div>
+            <div class="profile__section">
+                <div class="profile__info">
+                    <h1 class="profile__name" id="name">Жак-Ив Кусто</h1>
+                    <p class="profile__position" id="position-job">Исследователь океана</p>
+                </div>
+                <div>
+                    <button onclick="openForm()" class="popup__link"><img class="profile__button" alt=""
+                            src="./images/profile__button.svg"></button>
+                </div>
+                <div class="profile__element">
+                    <img class="profile__plus" alt="" src="./images/profile__plus.svg">
+                </div>
+        </section>
+        <section class="elements">
+            <ul class="elements__cards">
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__1.png">
+                    <div class="elements__flex"><p class="elements__text">Карачаевск</p><img class="elements__heart" src="./images/elements__heart.svg">
+                    </div>
+                </li>
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__2.png">
+                    <div class="elements__flex"><p class="elements__text">Гора Эльбрус</p><img class="elements__heart"
+                            src="./images/elements__heart.svg"></div>
+                </li>
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__3.png">
+                    <div class="elements__flex"><p class="elements__text">Домбай</p><img class="elements__heart" src="./images/elements__heart.svg"></div>
+                </li>
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__2.png">
+                    <div class="elements__flex"><p class="elements__text">Гора Эльбрус</p><img class="elements__heart"
+                            src="./images/elements__heart.svg"></div>
+                </li>
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__3.png">
+                    <div class="elements__flex"><p class="elements__text">Домбай</p><img class="elements__heart" src="./images/elements__heart.svg"></div>
+                </li>
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__1.png">
+                    <div class="elements__flex"><p class="elements__text">Карачаево-Черкессия</p><img class="elements__heart"
+                            src="./images/elements__heart.svg"></div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
+    </footer>
+
+    <div class="popup">
+        <div class="popup__container" action="#">
+            <form class="popup__content">
+                <a href="" class="popup__close" onclick="closeForm()"><img src="./images/popup__close.svg"
+                        class="popup__close-button"></a>
+                <div class="popup__title">Редактировать профиль</div>
+                <input type="text" input="" class="popup__input popup__author" value="Жак-Ив Кусто">
+                <input type="text" input="" class="popup__input popup__position" value="Исследователь океана">
+                <button class="popup__save" onclick="closeForm()">Сохранить</button>
+            </form>
+
+        </div>
+    </div>
+    <script src="./pages/index.js"></script>
+</body>
+
+</html>

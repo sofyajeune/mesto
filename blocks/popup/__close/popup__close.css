@@ -1,0 +1,20 @@
+.popup__close {
+    max-width: 2.50vw;
+    min-height: 2.50vw;
+    position: absolute;
+    top: -2.73vw;
+    right: -2.73vw;
+    color: #FFFFFF;
+    background-size: cover;
+}
+
+@media screen and (max-width: 500px) {
+    .popup__close {
+        top: -9vw;
+        right: 2vw;
+    }
+}
+
+.popup__close:hover {
+    opacity: 0.6;
+}

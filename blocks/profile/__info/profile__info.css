@@ -1,0 +1,12 @@
+.profile__info {
+    max-width: 22.97vw;
+    margin-top: 1.72vw;
+}
+
+@media screen and (max-width: 500px) {
+    .profile__info {
+        max-width: 88.13vw;
+        margin-left: 20.31vw;
+        padding-top: 6.88vw;
+    }
+}

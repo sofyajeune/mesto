@@ -1,0 +1,21 @@
+.profile__button {
+    max-width: 0.78vw;
+    min-height: 0.78vw;
+    padding: 0.55vw;
+    border: 1px solid #FFFFFF;
+    margin-top: 2.73vw;
+    margin-left: 1.41vw;
+}
+
+.profile__button:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 500px) {
+    .profile__button {
+        margin-top: 10.94vw;
+        margin-left: 3.13vw;
+        max-width: 5.73vw;
+
+    }
+}

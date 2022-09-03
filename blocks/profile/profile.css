@@ -1,0 +1,13 @@
+.profile {
+    max-width: 68.75vw;
+    margin: 0 auto;
+    display: flex;
+}
+
+@media screen and (max-width: 500px) {
+    .profile {
+        max-width: 100vw;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+}
