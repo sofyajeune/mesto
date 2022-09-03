@@ -24,37 +24,52 @@
                     <h1 class="profile__name" id="name">Жак-Ив Кусто</h1>
                     <p class="profile__position" id="position-job">Исследователь океана</p>
                 </div>
-                <div>
-                    <button onclick="openForm()" class="popup__link"><img class="profile__button" alt=""
-                            src="./images/profile__button.svg"></button>
-                </div>
-                <div class="profile__element">
-                    <img class="profile__plus" alt="" src="./images/profile__plus.svg">
-                </div>
+            </div>
+            <div>
+                <button onclick="openForm()" class="popup__link"><img class="profile__button" alt=""
+                        src="./images/profile__button.svg"></button>
+            </div>
+            <div class="profile__element">
+                <img class="profile__plus" alt="Фотография профиля" src="./images/profile__plus.svg">
+            </div>
         </section>
-        <section class="elements">
+        <section class="elements" aria-label="Фотографии пользователя">
             <ul class="elements__cards">
-                <li class="elements__card"><img class="elements__photo" src="./images/elements__1.png">
-                    <div class="elements__flex"><p class="elements__text">Карачаевск</p><img class="elements__heart" src="./images/elements__heart.svg">
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__1.png" alt="Ваше фото">
+                    <div class="elements__flex">
+                        <p class="elements__text">Карачаевск</p><img class="elements__heart"
+                            src="./images/elements__heart.svg" alt="Сердечко-лайк">
                     </div>
                 </li>
-                <li class="elements__card"><img class="elements__photo" src="./images/elements__2.png">
-                    <div class="elements__flex"><p class="elements__text">Гора Эльбрус</p><img class="elements__heart"
-                            src="./images/elements__heart.svg"></div>
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__2.png" alt="Ваше фото">
+                    <div class="elements__flex">
+                        <p class="elements__text">Гора Эльбрус</p><img class="elements__heart"
+                            src="./images/elements__heart.svg" alt="Сердечко-лайк">
+                    </div>
                 </li>
-                <li class="elements__card"><img class="elements__photo" src="./images/elements__3.png">
-                    <div class="elements__flex"><p class="elements__text">Домбай</p><img class="elements__heart" src="./images/elements__heart.svg"></div>
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__3.png" alt="Ваше фото">
+                    <div class="elements__flex">
+                        <p class="elements__text">Домбай</p><img class="elements__heart"
+                            src="./images/elements__heart.svg" alt="Сердечко-лайк">
+                    </div>
                 </li>
-                <li class="elements__card"><img class="elements__photo" src="./images/elements__2.png">
-                    <div class="elements__flex"><p class="elements__text">Гора Эльбрус</p><img class="elements__heart"
-                            src="./images/elements__heart.svg"></div>
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__2.png" alt="Ваше фото">
+                    <div class="elements__flex">
+                        <p class="elements__text">Гора Эльбрус</p><img class="elements__heart"
+                            src="./images/elements__heart.svg" alt="Сердечко-лайк">
+                    </div>
                 </li>
-                <li class="elements__card"><img class="elements__photo" src="./images/elements__3.png">
-                    <div class="elements__flex"><p class="elements__text">Домбай</p><img class="elements__heart" src="./images/elements__heart.svg"></div>
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__3.png" alt="Ваше фото">
+                    <div class="elements__flex">
+                        <p class="elements__text">Домбай</p><img class="elements__heart"
+                            src="./images/elements__heart.svg" alt="Сердечко-лайк">
+                    </div>
                 </li>
-                <li class="elements__card"><img class="elements__photo" src="./images/elements__1.png">
-                    <div class="elements__flex"><p class="elements__text">Карачаево-Черкессия</p><img class="elements__heart"
-                            src="./images/elements__heart.svg"></div>
+                <li class="elements__card"><img class="elements__photo" src="./images/elements__1.png" alt="Ваше фото">
+                    <div class="elements__flex">
+                        <p class="elements__text">Карачаево-Черкессия</p><img class="elements__heart"
+                            src="./images/elements__heart.svg" alt="Сердечко-лайк">
+                    </div>
                 </li>
             </ul>
         </section>
@@ -64,13 +79,13 @@
     </footer>
 
     <div class="popup">
-        <div class="popup__container" action="#">
+        <div class="popup__container">
             <form class="popup__content">
                 <a href="" class="popup__close" onclick="closeForm()"><img src="./images/popup__close.svg"
-                        class="popup__close-button"></a>
+                        class="popup__close-button" alt="Кнопка закрыть"></a>
                 <div class="popup__title">Редактировать профиль</div>
-                <input type="text" input="" class="popup__input popup__author" value="Жак-Ив Кусто">
-                <input type="text" input="" class="popup__input popup__position" value="Исследователь океана">
+                <input type="text" class="popup__input popup__author" value="Жак-Ив Кусто">
+                <input type="text" class="popup__input popup__position" value="Исследователь океана">
                 <button class="popup__save" onclick="closeForm()">Сохранить</button>
             </form>
 
