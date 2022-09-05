@@ -1,5 +1,8 @@
+/* NORMALIZE */
+@import url(../vendor/normalize.css);
+
 /* FONTS */
-@import url(../fonts/fonts.css);
+@import url(../vendor/fonts/fonts.css);
 
 /* PAGE */
 @import url(../blocks/page/page.css);
@@ -21,6 +24,7 @@
 @import url(../blocks/profile/__avatar/profile__avatar.css);
 @import url(../blocks/profile/__avatar-container/profile__avatar-container.css);
 @import url(../blocks/profile/__link/profile__link.css);
+@import url(../blocks/profile/__plus-button/profile__plus-button.css);
 
 /* ELEMENTS */
 @import url(../blocks/elements/elements.css);
@@ -30,6 +34,8 @@
 @import url(../blocks/elements/__flex/elements__flex.css);
 @import url(../blocks/elements/__cards/elements__cards.css);
 @import url(../blocks/elements/__card/elements__card.css);
+@import url(../blocks/elements/__heart/_active/elements__heart_active.css);
+@import url(../blocks/elements/__button/elements__button.css);
 
 /* FOOTER */
 @import url(../blocks/footer/footer.css);
@@ -46,15 +52,4 @@
 @import url(../blocks/popup/__close/popup__close.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/__author/popup__author.css);
-
-
-
-
-
-
-
-
-
-
-
-
+@import url(../blocks/popup/__open/popup__open.css);

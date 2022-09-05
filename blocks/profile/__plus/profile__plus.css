@@ -3,6 +3,8 @@
     min-height: 1.72vw;
     padding: 1.09vw 5vw 1.09vw 5vw;
     border: 1px solid #FFFFFF;
+    cursor: pointer;
+    border-radius: 2px;
 
 }
 

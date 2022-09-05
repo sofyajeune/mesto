@@ -1,12 +1,8 @@
 .elements__heart {
     max-width: 22px;
+    cursor: pointer;
 }
 
 .elements__heart:hover {
     opacity: 0.5;
-}
-
-.elements__heart:active {
-    background: #000000;
-    opacity: 1;
 }

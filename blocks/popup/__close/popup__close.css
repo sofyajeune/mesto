@@ -6,6 +6,12 @@
     right: -2.73vw;
     color: #FFFFFF;
     background-size: cover;
+    cursor: pointer;
+    border: medium none;
+    background-image: none;
+    background: transparent;
+    float: left;
+    background-color: transparent;
 }
 
 @media screen and (max-width: 500px) {

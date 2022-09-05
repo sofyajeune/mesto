@@ -5,6 +5,7 @@
     border: 1px solid #FFFFFF;
     margin-top: 2.73vw;
     margin-left: 1.41vw;
+    cursor: pointer;
 }
 
 .profile__button:hover {
