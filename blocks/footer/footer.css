@@ -1,11 +1,11 @@
 .footer {
     max-width: 68.75vw;
     margin: 0 auto;
-    padding-top: 5.23vw;
+    padding-top: 5.234375vw;
     padding-bottom: 4.69vw;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .footer {
         max-width: 88.13vw;
         padding-top: 15vw;

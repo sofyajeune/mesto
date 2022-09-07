@@ -1,10 +1,8 @@
-.elements__card {
-    min-height: 361px;
+.card__elements {
     max-width: 282px;
     object-fit: contain;
     background-color: #FFFFFF;
     background-size: cover;
     border-radius: 10px;
     margin: 0 auto;
-
 }

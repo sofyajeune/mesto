@@ -1,14 +1,13 @@
 .popup__author {
-    width: 27.97vw;
-    height: 4.45vw;
+    width: 27.96875vw;
+    height: 2.109375vw;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.09vw;
     line-height: 1.33vw;
-    margin-top: 2.34vw;
     border: none;
-    margin: 4.2vw 2.8vw 0 2.8vw;
+    padding-top: 3.046875vw;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -17,6 +16,6 @@
         width: 74.375vw;
         height: 14vw;
         font-size: 4.4vw;
-        margin-top: 10.34vw;
+        padding-top: 23.4375vw;
     }
 }
