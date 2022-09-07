@@ -27,4 +27,5 @@
 
 .profile__plus-button:hover {
     opacity: 0.6;
+    transition: ease-in-out .3s;
 }
