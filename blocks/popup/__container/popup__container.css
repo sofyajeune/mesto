@@ -1,17 +1,14 @@
 .popup__container {
+    position: relative;
     max-width: 33.59375vw;
-    min-height: 25.78125vw;
     background-color: #FFFFFF;
     color: #000000;
     border-radius: 0.78vw;
-    margin: 15.234375vw auto auto auto;
 }
 
 @media screen and (max-width: 500px) {
     .popup__container {
         max-width: 88.125vw;
-        min-height: 100.625vw;
-        margin: 38.4375vw auto auto auto;
         border-radius: 10px;
     }
 }

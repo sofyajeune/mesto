@@ -1,21 +1,21 @@
-.popup__author {
+.popup__input {
     width: 27.96875vw;
-    height: 2.109375vw;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.09vw;
     line-height: 1.33vw;
     border: none;
-    padding-top: 3.046875vw;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 1.0156625vw;
+    margin-top: 2.34375vw;
 }
 
 @media screen and (max-width: 500px) {
-    .popup__author {
-        width: 74.375vw;
-        height: 14vw;
+.popup__input {
+        width: 73.125vw;
         font-size: 4.4vw;
-        padding-top: 23.4375vw;
+        margin-top: 9.375vw;
+        padding-bottom: 4.0625vw;
     }
 }

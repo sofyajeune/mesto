@@ -4,10 +4,10 @@
     background-size: 1.71875vw;
     background-position: center;
     background-color: transparent;
-    max-width: 11.71874vw;
+    width: 11.71874vw;
     height: 3.90625vw;
     padding: 1.09375vw 5vw 1.09375vw 5vw;
-    border: 1px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
     cursor: pointer;
     border-radius: 0.15625vw;
     margin-left: 19.05vw;
@@ -20,7 +20,6 @@
         width: 88.125vw;
         height: 15.63vw;
         margin: 11.25vw auto 0 auto;
-        max-width: 5vw;
         padding: 5.31vw 41.25vw 5.31vw 41.25vw;
     }
 }

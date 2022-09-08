@@ -7,6 +7,7 @@
     line-height: 2.27vw;
     padding-top: 2.65625vw;
     padding-left: 2.8125vw;
+    margin: 0;
 }
 
 @media screen and (max-width: 500px) {

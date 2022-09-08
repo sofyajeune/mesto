@@ -2,6 +2,7 @@
     width: 27.97vw;
     height: 3.91vw;
     background-color: #000000;
+    font-size: 1.40625vw;
     color: #FFFFFF;
     border-radius: 2px;
     margin: 3.75vw auto 0 auto;
@@ -10,15 +11,14 @@
 }
 
 .popup__save:hover {
-    background: #000000;
     opacity: 0.8;
 }
 
 @media screen and (max-width: 500px) {
     .popup__save {
-        width: 74.375vw;
-        min-height: 14.375vw;
-        font-size: 4.4vw;
-        margin-top: 10vw;
+        width: 73.75vw;
+        height: 14.375vw;
+        font-size: 4.375vw;
+        margin-top: 14.0625vw;
     }
 }

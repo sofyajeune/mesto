@@ -12,8 +12,9 @@
     overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 781px) {
     .profile__position {
+        width: 59.0625vw;
         font-size: 4.38vw;
         padding-top: 4.38vw;
         text-align: center;
