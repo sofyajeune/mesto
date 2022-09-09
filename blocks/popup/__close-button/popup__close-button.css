@@ -9,8 +9,8 @@
     width: 2.5vw;
     height: 2.5vw;
     position: absolute;
-    top: -2.5vw;
-    right: -2.5vw;
+    top: -37px;
+    right: -36px; /* Продумать потом пропорциональное изменение положения кнопки */
 }
 
 .popup__close-button:hover {
@@ -22,7 +22,7 @@
         background-size: 6.25vw;
         width: 6.25vw;
         height: 6.25vw;
-        top: -10.9357vw;
+        top: -36px; /* Кнопка по пикселям идеально встала через Dimensions */
         right: 0;
     }
 }

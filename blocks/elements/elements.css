@@ -4,3 +4,8 @@
     margin: 0 auto;
 }
 
+@media screen and (max-width: 800px) {
+    .elements {
+    padding-top: 11.35vw;
+    }
+}
