@@ -22,7 +22,7 @@
         background-size: 6.25vw;
         width: 6.25vw;
         height: 6.25vw;
-        top: -36px; /* Кнопка по пикселям идеально встала через Dimensions */
-        right: 0;
+        top: -42px; 
+        right: 8px; 
     }
 }

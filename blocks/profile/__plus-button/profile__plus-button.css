@@ -12,6 +12,7 @@
     border-radius: 0.15625vw;
     margin-left: 19.05vw;
     margin-top: 2.73vw;
+    border-radius: 2px;
 }
 
 @media screen and (max-width: 800px) {
