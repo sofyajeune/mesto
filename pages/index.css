@@ -50,6 +50,11 @@
 @import url(../blocks/popupphoto/popupphoto.css);
 @import url(../blocks/popupphoto/_opened/popupphoto_opened.css);
 @import url(../blocks/popupphoto/__close-button/popupphoto__close-button.css);
+@import url(../blocks/popupphoto/__title/popupphoto__title.css);
+@import url(../blocks/popupphoto/__save/popupphoto__save.css);
+@import url(../blocks/popupphoto/__input/popupphoto__input.css);
+@import url(../blocks/popupphoto/__content/popupphoto__content.css);
+@import url(../blocks/popupphoto/__container/popupphoto__container.css);
 @import url(../blocks/popupopenphoto/popupopenphoto.css);
 @import url(../blocks/popupopenphoto/__photo/popupopenphoto__photo.css);
 @import url(../blocks/popupopenphoto/__image/popupopenphoto__image.css);

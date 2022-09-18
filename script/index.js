@@ -72,7 +72,7 @@ function formSubmitHandlerPhoto(evt) {
   photoInput.value = '';
   urlInput.value = '';
 
-  closePopup()
+  closePopupPhoto()
 };
 
 

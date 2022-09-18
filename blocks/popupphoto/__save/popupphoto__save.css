@@ -1,0 +1,24 @@
+.popupphoto__save {
+    width: 27.97vw;
+    height: 3.91vw;
+    background-color: #000000;
+    font-size: 1.40625vw;
+    color: #FFFFFF;
+    border-radius: 2px;
+    margin: 3.75vw auto 0 auto;
+    border: 0;
+    cursor: pointer;
+}
+
+.popupphoto__save:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 500px) {
+    .popupphoto__save {
+        width: 73.75vw;
+        height: 14.375vw;
+        font-size: 4.375vw;
+        margin-top: 14.0625vw;
+    }
+}

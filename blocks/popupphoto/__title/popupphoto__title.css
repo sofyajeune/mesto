@@ -1,0 +1,20 @@
+.popupphoto__title {
+    max-width: 25vw;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.88vw;
+    line-height: 2.27vw;
+    padding-top: 2.65625vw;
+    padding-left: 2.8125vw;
+    margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .popupphoto__title {
+        padding-top: 7.8125vw;
+        padding-left: 6.875vw;
+        max-width: 74.375vw;
+        font-size: 5.6vw;
+    }
+}
