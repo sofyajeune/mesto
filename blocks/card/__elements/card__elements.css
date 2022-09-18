@@ -1,10 +1,10 @@
 .card__elements {
-    max-width: 282px;
-    object-fit: contain;
-    background-color: #FFFFFF;
-    background-size: cover;
-    border-radius: 10px;
-    margin: 0 auto;
+    position: relative;
+    transition: transform .2s ease-out;
+}
+
+.card__elements:hover {
+    transform: scale(1.02);
 }
 
 

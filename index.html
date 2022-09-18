@@ -24,42 +24,18 @@
         </section>
         <section class="elements" aria-label="Фотографии пользователя">
             <ul class="card">
-                <li class="card__elements"><img class="card__photo" src="./images/profile_1.jpg" alt="Ваше фото">
-                    <div class="card__flex">
-                        <h2 class="card__text">Карачаевск</h2><button class="card__like-button" type="button"
-                            aria-label="мне нравится"></button>
-                    </div>
-                </li>
-                <li class="card__elements"><img class="card__photo" src="./images/profile_2.jpg" alt="Ваше фото">
-                    <div class="card__flex">
-                        <h2 class="card__text">Гора Эльбрус</h2><button class="card__like-button" type="button"
-                            aria-label="мне нравится"></button>
-                    </div>
-                </li>
-                <li class="card__elements"><img class="card__photo" src="./images/profile_3.jpg" alt="Ваше фото">
-                    <div class="card__flex">
-                        <h2 class="card__text">Домбай</h2><button class="card__like-button" type="button"
-                            aria-label="мне нравится"></button>
-                    </div>
-                </li>
-                <li class="card__elements"><img class="card__photo" src="./images/profile_2.jpg" alt="Ваше фото">
-                    <div class="card__flex">
-                        <h2 class="card__text">Гора Эльбрус</h2><button class="card__like-button" type="button"
-                            aria-label="мне нравится"></button>
-                    </div>
-                </li>
-                <li class="card__elements"><img class="card__photo" src="./images/profile_3.jpg" alt="Ваше фото">
-                    <div class="card__flex">
-                        <h2 class="card__text">Домбай</h2><button class="card__like-button" type="button"
-                            aria-label="мне нравится"></button>
-                    </div>
-                </li>
-                <li class="card__elements"><img class="card__photo" src="./images/profile_1.jpg" alt="Ваше фото">
-                    <div class="card__flex">
-                        <h2 class="card__text">Карачаево-Черкессия</h2><button class="card__like-button" type="button"
-                            aria-label="мне нравится"></button>
-                    </div>
-                </li>
+                <template id="cardTemplate">
+                    <li class="card__elements">
+                        <article class="card__article">
+                            <img class="card__photo" src="#" alt="">
+                            <div class="card__flex">
+                                <h2 class="card__text"></h2>
+                                <button class="card__like-button" type="button"></button>
+                            </div>
+                        </article>
+                        <button class="card__button-remove" type="button"></button>
+                    </li>
+                </template>
             </ul>
         </section>
     </main>
@@ -75,6 +51,28 @@
                 <input type="text" name="job" class="popup__input popup__input_data_job" required>
                 <button class="popup__save" type="submit" aria-label="сохранить">Сохранить</button>
             </form>
+        </div>
+    </div>
+    <div class="popupphoto">
+        <div class="popup__container">
+            <button class="popupphoto__close-button" type="button" aria-label="закрыть окно"></button>
+            <h2 class="popup__title">Новое место</h2>
+            <form class="popup__content" name="place">
+                <input type="text" name="place-name" class="popup__input popupphoto__input_data_photo"
+                    placeholder='Название' required>
+                <input type="text" name="place-image" class="popup__input popupphoto__input_data_url"
+                    placeholder='Ссылка на картинку' required>
+                <button class="popup__save" type="submit" aria-label="создать">Создать</button>
+            </form>
+        </div>
+    </div>
+    <div class="popupopenphoto">
+        <div class="popupopenphoto__container">
+            <button class="popupopenphoto__close-button" type="button"></button>
+            <figure class="popupopenphoto__photo">
+                <img class="popupopenphoto__image" src="#" alt="">
+                <figcaption class="popupopenphoto__caption"></figcaption>
+            </figure>
         </div>
     </div>
     <script src="./script/index.js"></script>

@@ -1,11 +1,4 @@
 .elements {
-    max-width: 68.75vw;
-    padding-top: 47.25px;
+    padding-top: 50px;
     margin: 0 auto;
-}
-
-@media screen and (max-width: 800px) {
-    .elements {
-    padding-top: 11.35vw;
-    }
 }

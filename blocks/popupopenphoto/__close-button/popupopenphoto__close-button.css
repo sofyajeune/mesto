@@ -1,4 +1,4 @@
-.popup__close-button {
+.popupopenphoto__close-button {
     border: medium none;
     background-image: url(../../../images/popup__close.svg);
     background-repeat: no-repeat;
@@ -13,12 +13,12 @@
     right: -2.8125vw; 
 }
 
-.popup__close-button:hover {
+.popupopenphoto__close-button:hover {
     opacity: 0.6;
 }
 
 @media screen and (max-width: 500px) {
-    .popup__close-button {
+    .popupopenphoto__close-button {
         background-size: 6.25vw;
         width: 6.25vw;
         height: 6.25vw;

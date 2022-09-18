@@ -1,7 +1,6 @@
 .card__flex {
-    max-width: 246px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    justify-content: space-between;
+    padding: 20px 21px 26px 21px;
 }
