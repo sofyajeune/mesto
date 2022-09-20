@@ -19,7 +19,7 @@ const card = document.querySelector('.card');
 
 const popupOpenPhotoImage = document.querySelector('.popup__image');
 const popupOpenPhotoCaption = document.querySelector('.popup__caption');
-const popupOpenPhoto = document.querySelector('.popup__type_open-image');
+const popupOpenPhoto = document.querySelector('.popup_type_open-image');
 const popupOpenPhotoCloseButton = document.querySelector('#closebutton-open-image')
 
 
