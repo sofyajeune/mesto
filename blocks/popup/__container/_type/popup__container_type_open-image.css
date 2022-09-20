@@ -1,13 +1,18 @@
-.popupopenphoto__container {
+.popup__container_type_open-image {
     position: relative;
-    color: #FFFFFF;
+    background: none;
+    box-shadow: none;
     border-radius: 0.78vw;
     max-width: 75vw;
     max-height: 75vh;
+
 }
 
+
+
 @media screen and (max-width: 500px) {
-    .popupopenphoto__container {
+    .popup__container_type_open-image {
         border-radius: 10px;
     }
+
 }

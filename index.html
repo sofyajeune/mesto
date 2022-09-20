@@ -42,9 +42,10 @@
     <footer class="footer">
         <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup__type_edit-form">
         <div class="popup__container">
-            <button class="popup__close-button" type="button" aria-label="закрыть окно"></button>
+            <button id='closebutton-edit-form' class="popup__close-button" type="button"
+                aria-label="закрыть окно"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__content" name="name">
                 <input type="text" name="author" class="popup__input popup__input_data_name" required>
@@ -53,28 +54,30 @@
             </form>
         </div>
     </div>
-    <div class="popupphoto">
-        <div class="popupphoto__container">
-            <button class="popupphoto__close-button" type="button" aria-label="закрыть окно"></button>
-            <h2 class="popupphoto__title">Новое место</h2>
-            <form class="popupphoto__content" name="place">
-                <input type="text" name="place-name" class="popupphoto__input popupphoto__input_data_photo"
-                    placeholder='Название' required>
-                <input type="text" name="place-image" class="popupphoto__input popupphoto__input_data_url"
+    <div class="popup popup__type_add-card">
+        <div class="popup__container">
+            <button id='closebutton-add-card' class="popup__close-button" type="button"
+                aria-label="закрыть окно"></button>
+            <h2 class="popup__title">Новое место</h2>
+            <form class="popup__content" name="place">
+                <input type="text" name="place-name" class="popup__input popup__input_data_photo" placeholder='Название'
+                    required>
+                <input type="text" name="place-image" class="popup__input popup__input_data_url"
                     placeholder='Ссылка на картинку' required>
-                <button class="popupphoto__save" type="submit" aria-label="создать">Создать</button>
+                <button class="popup__save" type="submit" aria-label="создать">Создать</button>
             </form>
         </div>
     </div>
-    <div class="popupopenphoto">
-        <div class="popupopenphoto__container">
-            <button class="popupopenphoto__close-button" type="button"></button>
-            <figure class="popupopenphoto__photo">
-                <img class="popupopenphoto__image" src="#" alt="">
-                <figcaption class="popupopenphoto__caption"></figcaption>
+    <div class="popup popup__type_open-image">
+        <div class="popup__container popup__container_type_open-image">
+            <button id='closebutton-open-image' class="popup__close-button" type="button"></button>
+            <figure class="popup__photo">
+                <img class="popup__image" src="#" alt="">
+                <figcaption class="popup__caption"></figcaption>
             </figure>
         </div>
     </div>
+    <script src="./script/cards.js"></script>
     <script src="./script/index.js"></script>
 </body>
 
