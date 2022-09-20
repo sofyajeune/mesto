@@ -1,6 +1,6 @@
 const profileUserName = document.querySelector('.profile__name');
 const profileUserJob = document.querySelector('.profile__position');
-const popupEditForm = document.querySelector('.popup__type_edit-form');
+const popupEditForm = document.querySelector('.popup_type_edit-form');
 const nameInput = popupEditForm.querySelector('.popup__input_data_name');
 const jobInput = popupEditForm.querySelector('.popup__input_data_job');
 const profileEditButton = document.querySelector('.profile__edit-button');
@@ -8,7 +8,7 @@ const popupCloseButton = document.querySelector('#closebutton-edit-form');
 
 const plusButton = document.querySelector('.profile__plus-button');
 const popupPhotoClose = document.querySelector('#closebutton-add-card');
-const formElementPhoto = document.querySelector('.popup__type_add-card');
+const formElementPhoto = document.querySelector('.popup_type_add-card');
 const photoInput = document.querySelector('.popup__input_data_photo');
 const urlInput = document.querySelector('.popup__input_data_url');
 const cardElement = document.querySelector('.card__text');
