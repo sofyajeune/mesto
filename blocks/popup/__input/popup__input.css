@@ -19,3 +19,8 @@
         padding-bottom: 4.0625vw;
     }
 }
+
+.popup__input:focus {
+    border-color: rgba(0, 0, 0, 0.2);
+    outline: none;
+}
