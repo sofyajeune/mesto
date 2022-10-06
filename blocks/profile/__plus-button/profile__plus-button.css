@@ -9,7 +9,8 @@
     padding: 1.09375vw 5vw 1.09375vw 5vw;
     border: 2px solid #FFFFFF;
     cursor: pointer;
-    margin-left: 19.05vw;
+    margin-right: 0;
+    margin-left: auto;
     margin-top: 2.73vw;
     border-radius: 2px;
 }
