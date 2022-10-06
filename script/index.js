@@ -20,19 +20,39 @@ const card = document.querySelector('.card');
 const popupOpenPhotoImage = document.querySelector('.popup__image');
 const popupOpenPhotoCaption = document.querySelector('.popup__caption');
 const popupOpenPhoto = document.querySelector('.popup_type_open-image');
-const popupOpenPhotoCloseButton = document.querySelector('#closebutton-open-image')
+const popupOpenPhotoCloseButton = document.querySelector('#closebutton-open-image');
+
+const popups = document.querySelectorAll('.popup')
 
 
 
 //Popup главный
 
+//Доп закрытия
+
+function closeEscape(evt) {
+  if (evt.key === 'Escape') {
+    popups.forEach(place => closePopup(place));
+  }
+}
+
+popups.forEach(popup => {
+  popup.addEventListener('mousedown', evt => {
+    if (evt.target.classList.contains('popup_opened') || evt.target.classList.contains('popup__close')) {
+      closePopup(popup);
+    }
+  });
+});
+
 
 function openPopup(place) {
   place.classList.add('popup_opened');
+  document.addEventListener('keydown', closeEscape);
 }
 
 function closePopup(place) {
   place.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closeEscape);
 }
 
 

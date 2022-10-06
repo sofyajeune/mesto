@@ -52,4 +52,6 @@
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/__caption/popup__caption.css);
 @import url(../blocks/popup/__container/_type/popup__container_type_open-image.css);
-
+@import url(../blocks/popup/__save/_disabled/popup__save_disabled.css);
+@import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/form/input-error/form__input-error.css);
