@@ -6,7 +6,7 @@ const settingsList = {
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__save',
   inactiveButtonClass: 'popup__save_disabled',
-  inputErrorClass: 'popup__form-input_error'
+  inputErrorClass: 'popup__form-input-error'
 }
 
 
@@ -67,13 +67,13 @@ function checkInputValidity(formElement, inputElement, settings) {
 //};
 
 function showInputError(formElement, inputElement, errorMessage, settings) {
-  const errorElement = formElement.querySelector(`.popup__form-input_error_${inputElement.id}`); // Выбираем элемент ошибки на основе уникального класса
+  const errorElement = formElement.querySelector(`.popup__form-input-error_${inputElement.id}`); // Выбираем элемент ошибки на основе уникального класса
   errorElement.textContent = errorMessage;
   inputElement.classList.add(settings.inputErrorClass);
 }
 
 function hideInputError(formElement, inputElement, settings) {
-  const errorElement = formElement.querySelector(`.popup__form-input_error_${inputElement.id}`); // Выбираем элемент ошибки на основе уникального класса
+  const errorElement = formElement.querySelector(`.popup__form-input-error_${inputElement.id}`); // Выбираем элемент ошибки на основе уникального класса
   errorElement.textContent = "";
   inputElement.classList.remove(settings.inputErrorClass);
 }
