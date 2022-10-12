@@ -1,29 +1,32 @@
 .profile__plus-button {
     background-image: url(../../../images/profile__plus.svg);
     background-repeat: no-repeat;
-    background-size: 1.71875vw;
     background-position: center;
-    background-color: transparent;
-    width: 11.71874vw;
-    height: 3.90625vw;
-    padding: 1.09375vw 5vw 1.09375vw 5vw;
     border: 2px solid #FFFFFF;
     cursor: pointer;
-    margin-right: 0;
+    width: 150px;
+    height: 50px;
+    padding: 0;
+    background-color: inherit;
     margin-left: auto;
-    margin-top: 2.73vw;
-    border-radius: 2px;
+    transition: opacity .2s linear;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
     .profile__plus-button {
-        background-size: 5vw;
-        width: 88.125vw;
-        height: 15.63vw;
-        margin: 11.25vw auto 0 auto;
-        padding: 5.31vw 41.25vw 5.31vw 41.25vw;
+        width: 90%;
+        margin: 0 auto;
+        background-size: ;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .profile__plus-button {
+        background-size: 6%;
+    }
+}
+
 
 .profile__plus-button:hover {
     opacity: 0.6;

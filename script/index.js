@@ -22,28 +22,28 @@ const popupOpenPhotoCaption = document.querySelector('.popup__caption');
 const popupOpenPhoto = document.querySelector('.popup_type_open-image');
 const popupOpenPhotoCloseButton = document.querySelector('#closebutton-open-image');
 
-const popups = document.querySelectorAll('.popup')
-
-
-
-//Popup главный
+const popups = document.querySelectorAll('.popup');
+const popupGeneralButtonSubmit = popupEditForm.querySelector('.popup__save');
+const popupAddCardButtonSubmit = formElementPhoto.querySelector('.popup__save');
 
 //Доп закрытия
 
 function closeEscape(evt) {
   if (evt.key === 'Escape') {
-    popups.forEach(place => closePopup(place));
+    const popupOpened = document.querySelector('.popup_opened');
+    closePopup(popupOpened);
   }
 }
 
 popups.forEach(popup => {
   popup.addEventListener('mousedown', evt => {
-    if (evt.target.classList.contains('popup_opened') || evt.target.classList.contains('popup__close')) {
+    if (evt.target.classList.contains('popup_opened') || evt.target.classList.contains('popup__close-button')) {
       closePopup(popup);
     }
   });
 });
 
+// Универсальные для открытия/закрытия попапа
 
 function openPopup(place) {
   place.classList.add('popup_opened');
@@ -55,12 +55,13 @@ function closePopup(place) {
   document.removeEventListener('keydown', closeEscape);
 }
 
-
+//Popup для редактирования информации профиля
 
 function openPopupEditForm() {
+  openPopup(popupEditForm);
   nameInput.value = profileUserName.textContent;
   jobInput.value = profileUserJob.textContent;
-  openPopup(popupEditForm)
+  enableButton(popupGeneralButtonSubmit);
 }
 
 function closePopupEditForm() {
@@ -79,7 +80,7 @@ function handleFormSubmit(evt) {
   closePopup(popupEditForm)
 };
 
-//Popup для картинок
+//Popup для создания новых карточек
 
 function openPopupPhoto() {
   openPopup(formElementPhoto)
@@ -87,6 +88,7 @@ function openPopupPhoto() {
 
 function closePopupPhoto() {
   closePopup(formElementPhoto)
+  disableButton(popupAddCardButtonSubmit)
 }
 
 function handleFormSubmitPhoto(evt) {
@@ -99,10 +101,10 @@ function handleFormSubmitPhoto(evt) {
   closePopup(formElementPhoto)
 };
 
-//Popup фото
+//Popup c увеличением фотографий
 
 function popupOpenPhotoOpen() {
-  openPopup(popupOpenPhoto)
+  openPopup(popupOpenPhoto);
 }
 
 function popupOpenPhotoClose() {
@@ -118,6 +120,20 @@ function openCard(image, caption) {
 
 popupOpenPhotoCloseButton.addEventListener('click', popupOpenPhotoClose);
 
+
+//Кнопки корр
+
+function enableButton(buttonElement) {
+  buttonElement.removeAttribute('disabled');
+  buttonElement.classList.remove('popup__save_disabled');
+}
+
+
+function disableButton(buttonElement) {
+  buttonElement.setAttribute('disabled', true);
+  buttonElement.classList.add('popup__save_disabled');
+}
+ 
 
 // Фотографии с карточками
 

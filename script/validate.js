@@ -9,16 +9,12 @@ const settingsList = {
   inputErrorClass: 'popup__form-input-error'
 }
 
-
 function enableValidation(settings) {
   const formList = Array.from(document.querySelectorAll(settings.formSelector));
   formList.forEach((formElement) => {
-    formElement.addEventListener('submit', evt => {
-      evt.preventDefault();
-    });
     setEventListeners(formElement, settings);
   });
-}
+};
 
 
 function setEventListeners(formElement, settings) {
@@ -57,14 +53,6 @@ function checkInputValidity(formElement, inputElement, settings) {
   }
 }
 
-//const checkInputValidity = () => {
-//if (!formInput.validity.valid) {
-//showError(formInput)
-//}
-//else {
-//   hideError(formInput)
-//}
-//};
 
 function showInputError(formElement, inputElement, errorMessage, settings) {
   const errorElement = formElement.querySelector(`.popup__form-input-error_${inputElement.id}`); // Выбираем элемент ошибки на основе уникального класса
@@ -79,3 +67,8 @@ function hideInputError(formElement, inputElement, settings) {
 }
 
 enableValidation(settingsList);
+
+
+
+
+

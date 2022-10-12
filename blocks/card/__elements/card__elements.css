@@ -1,6 +1,7 @@
 .card__elements {
     position: relative;
     transition: transform .2s ease-out;
+
 }
 
 .card__elements:hover {

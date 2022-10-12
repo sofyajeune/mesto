@@ -3,14 +3,16 @@
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
-    width: 1.875vw;
-    height: 1.875vw;
-    padding: 0.546875vw;
     border: 1px solid #FFFFFF;
-    margin-top: 2.73vw;
-    margin-left: 1.41vw;
     cursor: pointer;
-    background-size: 0.78125vw;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin-left: 16px;
+    transition: opacity .2s linear;
+    position: relative;
+    top: -10px;
 }
 
 .profile__edit-button:hover {
@@ -20,11 +22,8 @@
 
 @media screen and (max-width: 800px) {
     .profile__edit-button {
-        margin-top: 10.94vw;
-        margin-left: 3.13vw;
-        width: 5.625vw;
-        height: 5.625vw;
-        padding: 1.640625vw 1.640625vw 1.640625vw 1.640625vw;
-        background-size: 2.34375vw;
+        width: 18px;
+        height: 18px;
+        margin-left: 5px;
     }
 }
