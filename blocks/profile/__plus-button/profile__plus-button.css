@@ -10,18 +10,18 @@
     background-color: inherit;
     margin-left: auto;
     transition: opacity .2s linear;
-    cursor: pointer;
 }
+
 
 @media screen and (max-width: 800px) {
     .profile__plus-button {
         width: 90%;
         margin: 0 auto;
-        background-size: ;
+        background-size: 3%;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 400px) {
     .profile__plus-button {
         background-size: 6%;
     }
