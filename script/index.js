@@ -84,11 +84,11 @@ function handleFormSubmit(evt) {
 
 function openPopupPhoto() {
   openPopup(formElementPhoto)
+  disableButton(popupAddCardButtonSubmit)
 }
 
 function closePopupPhoto() {
   closePopup(formElementPhoto)
-  disableButton(popupAddCardButtonSubmit)
 }
 
 function handleFormSubmitPhoto(evt) {

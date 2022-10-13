@@ -4,3 +4,7 @@
     color: #E5E5E5;
     cursor: auto;
 }
+
+.popup__save:hover {
+    opacity: 1;
+}

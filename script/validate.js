@@ -6,7 +6,7 @@ const settingsList = {
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__save',
   inactiveButtonClass: 'popup__save_disabled',
-  inputErrorClass: 'popup__form-input-error'
+  inputErrorClass: 'popup__input_error'
 }
 
 function enableValidation(settings) {
