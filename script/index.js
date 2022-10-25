@@ -1,3 +1,15 @@
+import { initialCards } from './InitialCards.js';
+import Card from './Card.js';
+import formValidator from './FormValidator.js';
+
+const settingsList = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__save',
+  inactiveButtonClass: 'popup__save_disabled',
+  inputErrorClass: 'popup__input_error'
+}
+
 const profileUserName = document.querySelector('.profile__name');
 const profileUserJob = document.querySelector('.profile__position');
 const popupEditForm = document.querySelector('.popup_type_edit-form');
@@ -25,6 +37,7 @@ const popupOpenPhotoCloseButton = document.querySelector('#closebutton-open-imag
 const popups = document.querySelectorAll('.popup');
 const popupGeneralButtonSubmit = popupEditForm.querySelector('.popup__save');
 const popupAddCardButtonSubmit = formElementPhoto.querySelector('.popup__save');
+
 
 //Доп закрытия
 
@@ -121,7 +134,7 @@ function openCard(image, caption) {
 popupOpenPhotoCloseButton.addEventListener('click', popupOpenPhotoClose);
 
 
-//Кнопки корр
+//Дополнительные функции для вкл/откл кнопок save
 
 function enableButton(buttonElement) {
   buttonElement.removeAttribute('disabled');
@@ -133,11 +146,45 @@ function disableButton(buttonElement) {
   buttonElement.setAttribute('disabled', true);
   buttonElement.classList.add('popup__save_disabled');
 }
- 
+
+// Данные карточки 
+
+/*const initialCards = [
+  {
+    name: 'Архыз',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+  },
+  {
+    name: 'Челябинская область',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+  },
+  {
+    name: 'Иваново',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+  },
+  {
+    name: 'Камчатка',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+  },
+  {
+    name: 'Холмогорский район',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
+    name: 'Байкал',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  }
+];*/
+
+
+
 
 // Фотографии с карточками
 
-const cardTemplate = document.querySelector('#cardTemplate').content;
+const cardTemplate = 
+
+
+document.querySelector('#cardTemplate').content;
 
 function createCard(name, link) {
   const cardElement = cardTemplate.querySelector('.card__elements').cloneNode(true);
@@ -165,6 +212,8 @@ function renderCard(name, link) {
 
 initialCards.forEach((item) => renderCard(item.name, item.link));
 
+// Слушатели
+
 profileEditButton.addEventListener('click', openPopupEditForm);
 popupCloseButton.addEventListener('click', closePopupEditForm);
 popupEditForm.addEventListener('submit', handleFormSubmit);
@@ -173,5 +222,4 @@ popupEditForm.addEventListener('submit', handleFormSubmit);
 plusButton.addEventListener('click', openPopupPhoto);
 popupPhotoClose.addEventListener('click', closePopupPhoto);
 formElementPhoto.addEventListener('submit', handleFormSubmitPhoto);
-
 
