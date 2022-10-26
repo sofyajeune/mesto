@@ -2,6 +2,7 @@ import { initialCards } from './InitialCards.js';
 import Card from './Card.js';
 import formValidator from './FormValidator.js';
 
+
 const settingsList = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
@@ -9,6 +10,7 @@ const settingsList = {
   inactiveButtonClass: 'popup__save_disabled',
   inputErrorClass: 'popup__input_error'
 }
+
 
 const profileUserName = document.querySelector('.profile__name');
 const profileUserJob = document.querySelector('.profile__position');
@@ -37,6 +39,11 @@ const popupOpenPhotoCloseButton = document.querySelector('#closebutton-open-imag
 const popups = document.querySelectorAll('.popup');
 const popupGeneralButtonSubmit = popupEditForm.querySelector('.popup__save');
 const popupAddCardButtonSubmit = formElementPhoto.querySelector('.popup__save');
+
+// Применяем класс с переменными
+
+const popupEditFormValidator = new formValidator(settingsList, popupEditForm);
+const formElementPhotoValidator = new formValidator(settingsList, formElementPhoto);
 
 
 //Доп закрытия
@@ -222,4 +229,9 @@ popupEditForm.addEventListener('submit', handleFormSubmit);
 plusButton.addEventListener('click', openPopupPhoto);
 popupPhotoClose.addEventListener('click', closePopupPhoto);
 formElementPhoto.addEventListener('submit', handleFormSubmitPhoto);
+
+//Вызов валидации
+
+popupEditFormValidator.enableValidation();
+formElementPhotoValidator.enableValidation();
 
