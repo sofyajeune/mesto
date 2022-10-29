@@ -1,10 +1,10 @@
-.card__elements {
+.cards__elements {
     position: relative;
     transition: transform .2s ease-out;
 
 }
 
-.card__elements:hover {
+.cards__elements:hover {
     transform: scale(1.02);
 }
 

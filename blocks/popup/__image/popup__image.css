@@ -2,4 +2,6 @@
     object-fit: cover;
     max-width: inherit;
     max-height: inherit;
+    background-color: black;
+    color: aliceblue;
     }

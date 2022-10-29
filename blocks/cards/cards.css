@@ -1,4 +1,4 @@
-.card {
+.cards {
     /*max-width: 68.75vw;*/
     list-style: none;
     display: grid;
@@ -13,13 +13,13 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .card {
+    .cards {
         grid-template-columns: repeat(2, minmax(40%, 282px));
     }
 }
 
 @media screen and (max-width: 767px) {
-    .card {
+    .cards {
         grid-template-columns: minmax(90%, 282px);
     }
 }
