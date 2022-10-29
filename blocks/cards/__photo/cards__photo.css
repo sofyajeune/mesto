@@ -4,7 +4,7 @@
     border-radius: 10px 10px 0 0;
     object-position: center;
     object-fit: cover;
-    background-color: black;
+    background-color: black; /* Черная подложка работает через Live Server*/
 }
 
 .cards__photo:hover {
