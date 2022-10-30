@@ -27,7 +27,6 @@ const photoInput = document.querySelector(".popup__input_data_photo");
 const urlInput = document.querySelector(".popup__input_data_url");
 
 const cards = document.querySelector(".cards");
-const cardElement = document.querySelector(".cards__text");
 
 const popupOpenPhotoImage = document.querySelector(".popup__image");
 const popupOpenPhotoCaption = document.querySelector(".popup__caption");
@@ -47,11 +46,11 @@ const cardValidator = new FormValidator(settingsValidation, formElementPhoto);
 
 //------------------------- ОБЩИЕ ФУНКЦИИ --------------------//
 // функция создания карточки
-function createCard(object) {
-  const cardElement = new Card(object, openCard).createCard();
-  cards.prepend(cardElement);
+function createCard(cardObject) {
+  const cardElement = new Card(cardObject, openCard).createCard();
   return cardElement;
 }
+
 
 // обработка нажатия esc
 function handleEscape(evt) {
@@ -74,8 +73,8 @@ function openProfileEditPopup() {
   openPopup(popupEditForm);
   nameInput.value = profileUserName.textContent;
   jobInput.value = profileUserJob.textContent;
-  profileValidator.enableButton(popupGeneralButtonSubmit);
 }
+
 // сабмит попапа профиля
 function handleFormSubmitEditProfile(evt) {
   evt.preventDefault();
@@ -91,16 +90,15 @@ function handleFormSubmitEditProfile(evt) {
 // открытие попапа создания новых карточек
 function openCardFormPopup() {
   openPopup(formElementPhoto);
-  cardValidator.disableButton();
+  cardValidator.resetValidation();
 }
 // сабмит попапа создания новых карточек
 function handleFormSubmitCard(evt) {
   evt.preventDefault();
-
-  createCard({ name: photoInput.value, link: urlInput.value });
+  const card = createCard({ name: photoInput.value, link: urlInput.value })
+    cards.prepend(card);
   photoInput.value = "";
   urlInput.value = "";
-
   closePopup(formElementPhoto);
 }
 // открытие попапа карточки

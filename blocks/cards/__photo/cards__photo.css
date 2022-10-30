@@ -5,6 +5,7 @@
     object-position: center;
     object-fit: cover;
     background-color: black; /* Черная подложка работает через Live Server*/
+    color: white;
 }
 
 .cards__photo:hover {

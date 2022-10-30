@@ -27,14 +27,15 @@ export default class FormValidator {
       this._hideInputError(inputElement);
     });
     this._toggleButtonState();
+    this._disableButton();
   }
 
-  enableButton() {
+  _enableButton() {
     this._submitButton.classList.remove(this._inactiveButtonClass);
     this._submitButton.removeAttribute("disabled");
   }
 
-  disableButton() {
+  _disableButton() {
     this._submitButton.setAttribute("disabled", true);
     this._submitButton.classList.add(this._inactiveButtonClass);
   }
@@ -44,9 +45,9 @@ export default class FormValidator {
 
   _toggleButtonState = () => {
     if (this._hasInvalidInput()) {
-      this.disableButton();
+      this._disableButton();
     } else {
-      this.enableButton();
+      this._enableButton();
     }
   };
 

@@ -8,21 +8,21 @@
 событий.*/
 
 export default class Card {
-  constructor(object, openCard) {
-    this._name = object.name;
-    this._link = object.link;
+  constructor(cardObject, openCard) {
+    this._name = cardObject.name;
+    this._link = cardObject.link;
     this._openCard = openCard;
   }
 
   createCard() {
-    this._object = this._cardTemplate();
+    this._cardObject = this._cardTemplate();
     this._setEventListeners();
 
     this._cardElementImage.src = this._link;
     this._cardElementImage.alt = `Изображение ${this._name}`;
-    this._object.querySelector('.cards__text').textContent = this._name;
+    this._cardObject.querySelector('.cards__text').textContent = this._name;
 
-    return this._object
+    return this._cardObject
   }
 
   _cardTemplate() {
@@ -32,11 +32,11 @@ export default class Card {
   }
   _setEventListeners() {
 
-    this._cardDeleteButton = this._object.querySelector('.cards__button-remove');
-    this._likeButton = this._object.querySelector('.cards__like-button');
-    this._cardElementImage = this._object.querySelector('.cards__photo');
+    this._cardDeleteButton = this._cardObject.querySelector('.cards__button-remove');
+    this._likeButton = this._cardObject.querySelector('.cards__like-button');
+    this._cardElementImage = this._cardObject.querySelector('.cards__photo');
 
-    this._cardDeleteButton.addEventListener('click', () => this._object.remove());
+    this._cardDeleteButton.addEventListener('click', () => this._cardObject.remove());
     this._likeButton.addEventListener('click', () => this._likeButton.classList.toggle('cards__like-button_active'));
     this._cardElementImage.addEventListener('click', () => this._openCard(this._link, this._name));
   }
