@@ -1,5 +1,4 @@
 import Popup from "./Popup.js";
-import { nameInput, jobInput, photoInput, urlInput } from '../utils/constants.js'
 
 export default class PopupWithForm extends Popup {
   constructor(popupSelector, submitForm) {
@@ -10,30 +9,13 @@ export default class PopupWithForm extends Popup {
   }
 
   _getInputValues() {
-return {
-  name: nameInput.value,
-  job: jobInput.value,
-  place: photoInput.value,
-  url: urlInput.value,
-}
-  }
-
-  /*
-
-      this._formValues = {};
+    this._formValues = {};
     this._inputList.forEach((input) => {
       this._formValues[input.name] = input.value;
     });
+    console.log(this._formValues)
     return this._formValues; 
-
-если this._formValues  - это пустой объект, то да, ты наполняешь объект парами ключ: значение
-
-если this._formValues  - это объект с данными, то ты их по ключам перезаписываешь новыми значениями
-
-input.name отдаст нам строку, при помощи квадратных скобок ['строка'] динамически определим ключ в объекте
-...
-
-а если просто вернуть значения из переменных*/
+  }
 
   close() {
     super.close();

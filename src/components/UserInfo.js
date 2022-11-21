@@ -10,21 +10,21 @@
 новые данные пользователя и добавляет их на страницу.*/
 
 export default class UserInfo {
-    constructor({ name, job }) {
-      this._nameSelector = name;
-      this._jobSelector = job;
+    constructor({ userNameSelector, userJobSelector }) {
+      this._userNameSelector = userNameSelector;
+      this._userJobSelector = userJobSelector;
     }
 
   //возвращает данные пользователи 
     getUserInfo() {
       return {
-        name: this._nameSelector.textContent,
-        job:  this._jobSelector.textContent
+        userNameSelector: this._userNameSelector.textContent,
+        userJobSelector:  this._userJobSelector.textContent
       }
     }
   // отправляет данные пользователи в разметку
     setUserInfo(data) {
-      this._nameSelector.textContent = data.name;
-      this._jobSelector.textContent = data.job;
+      this._userNameSelector.textContent = data.author;
+      this._userJobSelector.textContent = data.job;
     }
   }
