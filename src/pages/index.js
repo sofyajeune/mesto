@@ -31,8 +31,8 @@ const popupOpenImage = new PopupWithImage(popupOpenPhoto);
 const popupCard = new PopupWithForm(formElementPhoto, submitPopupCard); 
 const popupProfile = new PopupWithForm(popupEditForm, submitPopupProfile);
 const userInfo = new UserInfo({
-  userNameSelector: profileUserName,
-  userJobSelector: profileUserJob,
+  name: profileUserName,
+  job: profileUserJob,
 });
 
 const createCard = (item) => {
@@ -54,12 +54,11 @@ const defaultCardList = new Section({
 }, cards);
 
 
-
 profileEditButton.addEventListener('click', () => {
   popupProfile.open();
   const userInfoNow = userInfo.getUserInfo();
-  nameInput.value = userInfoNow.userNameSelector,
-  jobInput.value = userInfoNow.userJobSelector,
+  nameInput.value = userInfoNow.name,
+  jobInput.value = userInfoNow.job,
   profileValidator.enableButton();
 });
 
