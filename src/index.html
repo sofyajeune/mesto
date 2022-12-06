@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Mesto</title>
 </head>
 
@@ -15,6 +14,8 @@
     <main>
         <section class="profile">
             <img class="profile__avatar" src="<%=require('./images/profile_avatar.jpg')%>" alt="Аватарка">
+            <button type="button" class="profile__avatar-edit-button"
+                aria-label="кнопка для изменения аватара"></button>
             <div class="profile__info">
                 <h1 class="profile__name" id="name">Жак-Ив Кусто</h1>
                 <button class="profile__edit-button" type="button" aria-label="добавление информации"></button>
@@ -30,7 +31,10 @@
                             <img class="cards__photo" src="#" alt="">
                             <div class="cards__flex">
                                 <h2 class="cards__text"></h2>
-                                <button class="cards__like-button" type="button"></button>
+                                <div>
+                                    <button class="cards__like-button" type="button"></button>
+                                    <p class="cards__amount-likes">0</p>
+                                </div>
                             </div>
                         </article>
                         <button class="cards__button-remove" type="button"></button>
@@ -48,16 +52,42 @@
                 aria-label="закрыть окно"></button>
             <form class="popup__form" name="edit-profile" id="edit-profile" novalidate>
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <input type="text" name="author" class="popup__input popup__input_data_name" id="data_name"
-                    minlength="2" maxlength="40" placeholder='Имя' required>
+                <input type="text" name="name" class="popup__input popup__input_data_name" id="data_name" minlength="2"
+                    maxlength="40" placeholder='Имя' required>
                 <span class="popup__form-input-error" id="data_name-error"></span>
-                <input type="text" name="job" class="popup__input popup__input_data_job" id="data_job" minlength="2"
+                <input type="text" name="about" class="popup__input popup__input_data_job" id="data_job" minlength="2"
                     maxlength="200" placeholder='О себе' required>
                 <span class="popup__form-input-error" id="data_job-error"></span>
                 <button class="popup__save" type="submit" aria-label="сохранить">Сохранить</button>
             </form>
         </div>
     </div>
+
+    <div class="popup popup_type_edit-avatar">
+        <div class="popup__container">
+            <form class="popup__form" name="edit-profile-avatar">
+                <button id='closebutton-edit-avatar' class="popup__close-button" type="button"
+                    aria-label="закрыть окно"></button>
+                <h2 class="popup__title">Обновить аватар</h2>
+                <input id="input-avatar" type="url" name="avatar" class="popup__input popup__input_avatar" value=""
+                    required>
+                <span id="input-avatar-error" class="popup__form-input-error"></span>
+                <button class="popup__save" type="submit" aria-label="сохранить">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup_type_delete-card">
+        <div class="popup__container">
+            <form class="popup__form" name="delete-card">
+                <button id='closebutton-delete-card' class="popup__close-button" type="button"
+                    aria-label="закрыть окно"></button>
+                <h2 class="popup__title">Вы уверены?</h2>
+                <button type="submit" class="popup__save" name="#submit-delete-card">Да</button>
+            </form>
+        </div>
+    </div>
+
     <div class="popup popup_type_add-card">
         <div class="popup__container">
             <button id='closebutton-add-card' class="popup__close-button" type="button"

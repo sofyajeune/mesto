@@ -1,10 +1,3 @@
-/*Создайте класс PopupWithImage, 
-который наследует от Popup. Этот класс должен 
-перезаписывать родительский метод open. 
-В методе open класса PopupWithImage нужно 
-вставлять в попап картинку с src изображения
- и подписью к картинке.*/
-
 import Popup from "./Popup.js";
 
 export default class PopupWithImage extends Popup {
@@ -14,22 +7,10 @@ export default class PopupWithImage extends Popup {
     this._caption = this._popup.querySelector('.popup__caption');
   }
 
-  open(image, caption) {
-    this._image.src = image;
-    this._image.alt = `Изображение ${caption}`;
-    this._caption.textContent = caption;
+  open(data) {
+    this._image.src = data.link;
+    this._image.alt = data.name;
+    this._caption.textContent = data.name;
     super.open();
   }
 }
-
-/*function openCard(image, caption) { 
-
-  openPopup(popupOpenPhoto); 
-
-  popupOpenPhotoImage.src = image; 
-
-  popupOpenPhotoImage.alt = `Изображение ${caption}`; 
-
-  popupOpenPhotoCaption.textContent = caption; 
-
-} */
