@@ -23,12 +23,9 @@ import {
   popupAvatar,
   buttonPopupAvatar,
   profileAvatar,
-  popupAvatarSaveButton,
-  popupAddButton,
-  popupGeneralButtonSubmit,
   currentId,
   popupDeleteCard,
-  popupDeleteCardSubmit
+  templateSelector
 } from '../utils/constants.js';
 
 //Валидация
@@ -54,7 +51,6 @@ const confirmPopup = new PopupWithConfirmation(popupDeleteCard); // Попап �
 const api = new Api(options);
 Promise.all([api.getUserInfo(), api.getInitialCard()])
   .then(([data, cards]) => {
-    console.log(data);
     userInfo.setUserInfo(data);
     cardList.renderItems(cards.reverse());
   })
@@ -62,40 +58,47 @@ Promise.all([api.getUserInfo(), api.getInitialCard()])
     console.log(err);
   });
 
-const like = id => api.like(id);
-const dislike = id => api.dislike(id);
-
-
-
-//Функция для изменения кнопки на режим сохранения
-function showLoading(isLoading, button, defaultText) {
-  if (isLoading) {
-    button.textContent = "Сохранение..."
-  } else {
-    button.textContent = defaultText
-  }
-};
-
-
 //Создать карточку
+
 function createCard(item) {
-  const card = new Card(item, '#cardsTemplate', like, dislike, currentId, 
-  () => popupOpenImage.open({ name: item.name, link: item.link }), //handleCardClick 
-  () => {
-    confirmPopup.open();
-    confirmPopup.handleConfirm(() => {
-      showLoading(true, popupDeleteCardSubmit)
-      api.removeCard(item._id)
-        .then(() => card.removeCard())
-        .then(confirmPopup.close.bind(confirmPopup))
-        .catch(err => console.log(err))
-        .finally(() => {
-          showLoading(false, popupDeleteCardSubmit, "Да")
-        })
-    })
-  });//handleDeleteClick
-  const cardElement = card.createCard();
-  return cardElement;
+  const card = new Card(item, templateSelector, currentId,
+    () => popupOpenImage.open({ name: item.name, link: item.link }), //handleCardClick 
+    () => {
+      confirmPopup.open();
+      confirmPopup.handleConfirm(() => {
+        confirmPopup.renderLoading(true)
+        api.removeCard(item._id)
+          .then(() => card.removeCard())
+          .then(confirmPopup.close())
+          .catch(err => console.log(err))
+          .finally(() => {
+            confirmPopup.renderLoading(true, 'Удалено')
+          })//handleDeleteClick
+      })
+    },
+    (id) => {
+      if (card.isLiked()) {
+          api.changeLikeCardStatus(id, true)
+              .then((res) => {
+                  card.getLikesAmount(res)
+              })
+              .then(() => {
+                  card.dislikeCard()
+              })
+              .catch(err => console.log(err))
+
+      } else {
+          api.changeLikeCardStatus(id, false)
+              .then((res) => {
+                  card.getLikesAmount(res);
+              })
+              .then(() => {
+                  card.likeCard()
+              })
+              .catch(err => console.log(err))
+      }}); //handleLikeClick
+const cardElement = card.createCard();
+return cardElement;
 };
 
 
@@ -106,33 +109,9 @@ const cardList = new Section({
 },
   cards);
 
-// const createCard = (item) => {
-//   const cardElement = new Card(item, '#cardsTemplate', {
-//     handleCardClick: () => {
-//       popupOpenImage.open(item);
-//     }
-//   });
-//   return cardElement;
-// }
-
-
-// const defaultCardList = new Section({
-//   renderer: (item) => {
-//     const card = createCard(item)
-//     const cardElement = card.createCard();
-//     defaultCardList.addItem(cardElement);
-//   }
-// }, cards);
-
-
-
-// function submitPopupProfile(data) {
-//   userInfo.setUserInfo(data);
-// }
-
 //Сабмит инфы профиля 
 function submitPopupProfile(data) {
-  showLoading(true, popupGeneralButtonSubmit)
+  popupProfile.renderLoading(true)
   api.setUserInfo(data.name, data.about)
     .then(() => {
       userInfo.setUserInfo(data);
@@ -140,13 +119,13 @@ function submitPopupProfile(data) {
     })
     .catch((err) => console.log(err))
     .finally(() => {
-      showLoading(false, popupGeneralButtonSubmit, "Сохранить")
+      popupProfile.renderLoading(false, 'Сохранено')
     });
 }
 
 //Сабмит карточки 
 function submitPopupCard(data) {
-  showLoading(true, popupAddButton)
+  popupCard.renderLoading(true)
   api.addNewCard(data.name, data.link)
     .then((data) => {
       cardList.addItem(createCard(data))
@@ -154,22 +133,22 @@ function submitPopupCard(data) {
     })
     .catch((err) => console.log(err))
     .finally(() => {
-      showLoading(false, popupAddButton, "Создать")
+      popupCard.renderLoading(false, 'Создать')
     })
 }
 
 //Сабмит аватарки 
 function submitNewAvatar(data) {
-  showLoading(true, popupAvatarSaveButton)
+  newAvatar.renderLoading(true)
   api.addNewAvatar(data)
     .then((data) => {
       userInfo.setUserInfo(data)
     })
     .catch((err) => console.log(err))
     .finally(() => {
-      showLoading(false, popupAvatarSaveButton, "Сохранить")
+      newAvatar.renderLoading(false, 'Сохранить')
     });
-    newAvatar.close();
+  newAvatar.close();
 }
 
 
@@ -200,7 +179,3 @@ confirmPopup.setEventListeners();
 profileValidator.enableValidation();
 cardValidator.enableValidation();
 avatarValidator.enableValidation();
-
-
-
-

@@ -5,6 +5,18 @@ export default class PopupWithConfirmation extends Popup {
     super(popupSelector);
   };
 
+  renderLoading(isLoading, submitType) {
+    if (isLoading) {
+      this._popup.querySelector('.popup__save').textContent = 'Удаление...';
+    } else {
+      this._popup.querySelector('.popup__save').textContent = submitType;
+    }
+  }
+
+  close() {
+    super.close()
+  }
+
   handleConfirm(handleDeleteCard) {
     this._handleDeleteCard = handleDeleteCard;
   }

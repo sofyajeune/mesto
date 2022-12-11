@@ -1,12 +1,12 @@
 export default class Card {
-  constructor(data, templateSelector, like, dislike, currentId, handleCardClick, handleDeleteClick) {
+  constructor(data, templateSelector, currentId, handleCardClick, handleDeleteClick, handleLikeClick) {
     this._templateSelector = templateSelector;
     this._data = data;
     this._handleCardClick = handleCardClick;
-    this._like = like;
-    this._dislike = dislike;
     this._userId = currentId;
     this._handleDeleteClick = handleDeleteClick;
+    this._handleLikeClick = handleLikeClick;
+    this._id = data._id;
   }
 
   removeCard() {
@@ -59,12 +59,20 @@ export default class Card {
     return likesCounter;
   };
 
-  _getLikesAmount(arr) {
-    this._likesCounter.textContent = arr.likes.length;
+  getLikesAmount(arr) {
+    this._likesCounter.textContent = arr.likes.length
   };
 
+  dislikeCard() {
+    this._cardLike.classList.remove('cards__like-button_active')
+};
+
+likeCard() {
+  this._cardLike.classList.add('cards__like-button_active')
+}
+
   _setInitialCardSettings() {
-    this._getLikesAmount(this._data)
+    this.getLikesAmount(this._data)
     if (this._data.likes.some(element => element._id === this._userId)) {
       this._cardLike.classList.add('cards__like-button_active');
     }
@@ -73,23 +81,14 @@ export default class Card {
     }
   };
 
-  _handleLike() {
-    this._like(this._data._id)
-      .then((arr) => {
-        this._cardLike.classList.add('cards__like-button_active');
-        this._getLikesAmount(arr)
-      })
-      .catch(err => console.log(err));
-  };
-
-  _handleDislike() {
-    this._dislike(this._data._id)
-      .then((arr) => {
-        this._cardLike.classList.remove('cards__like-button_active');
-        this._getLikesAmount(arr)
-      })
-      .catch(err => console.log(err));
-  };
+  isLiked() {
+    if (this._cardLike.classList.contains('cards__like-button_active')) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 
   _setEventListeners() {
     this._image.addEventListener('click', () => {
@@ -99,12 +98,6 @@ export default class Card {
     this._cardDelete.addEventListener('click', () => {
       this._handleDeleteClick();
     });
-    this._cardLike.addEventListener('click', () => {
-      if (this._cardLike.classList.contains('card__like_active')) {
-        this._handleDislike()
-      } else {
-        this._handleLike()
-      }
-    });
+    this._cardLike.addEventListener('click', () => this._handleLikeClick(this._id));
+    }
   };
-}

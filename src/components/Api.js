@@ -51,7 +51,7 @@ export default class Api {
     })
       .then(this._handleResponse)
   };
-  
+
   addNewAvatar(data) {
     return fetch(`${this.link}/users/me/avatar`, {
       method: 'PATCH',
@@ -71,25 +71,41 @@ export default class Api {
       .then(this._handleResponse)
   };
 
-  like(id) {
-    return fetch(`${this.link}/cards/${id}/likes`, {
-      method: 'PUT',
-      headers: this.headers,
-      body: JSON.stringify({
-        _id: `${id}`
-      })
+  changeLikeCardStatus(id, like) {
+const whichMethod = like ? "DELETE" : "PUT";
+return fetch(`${this.link}/cards/${id}/likes`, {
+    method: whichMethod,
+    headers: this.headers,
+})  
+.then(res => {
+        if (res.ok) {
+            return res.json();
+        }
+        return Promise.reject(`Error: ${res.status}`)
     })
-      .then(this._handleResponse)
-  };
+    .catch(err => console.log(err))
+}
 
-  dislike(id) {
-    return fetch(`${this.link}/cards/${id}/likes`, {
-      method: 'DELETE',
-      headers: this.headers,
-      body: JSON.stringify({
-        _id: `${id}`
-      })
-    })
-      .then(this._handleResponse)
-  };
+
+  // like(id) {
+  //   return fetch(`${this.link}/cards/${id}/likes`, {
+  //     method: 'PUT',
+  //     headers: this.headers,
+  //     body: JSON.stringify({
+  //       _id: `${id}`
+  //     })
+  //   })
+  //     .then(this._handleResponse)
+  // };
+
+  // dislike(id) {
+  //   return fetch(`${this.link}/cards/${id}/likes`, {
+  //     method: 'DELETE',
+  //     headers: this.headers,
+  //     body: JSON.stringify({
+  //       _id: `${id}`
+  //     })
+  //   })
+  //     .then(this._handleResponse)
+  // };
 }
