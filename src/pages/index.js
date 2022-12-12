@@ -1,4 +1,4 @@
-import './index.css'; 
+import './index.css';
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 import PopupWithForm from "../components/PopupWithForm.js";
@@ -68,8 +68,7 @@ function createCard(item) {
       confirmPopup.handleConfirm(() => {
         confirmPopup.renderLoading(true)
         api.removeCard(item._id)
-          .then(() => card.removeCard())
-          .then(confirmPopup.close())
+          .then(() => card.removeCard(), confirmPopup.close())
           .catch(err => console.log(err))
           .finally(() => {
             confirmPopup.renderLoading(true, 'Удалено')
@@ -78,27 +77,28 @@ function createCard(item) {
     },
     (id) => {
       if (card.isLiked()) {
-          api.changeLikeCardStatus(id, true)
-              .then((res) => {
-                  card.getLikesAmount(res)
-              })
-              .then(() => {
-                  card.dislikeCard()
-              })
-              .catch(err => console.log(err))
+        api.changeLikeCardStatus(id, true)
+          .then((res) => {
+            card.getLikesAmount(res)
+          })
+          .then(() => {
+            card.dislikeCard()
+          })
+          .catch(err => console.log(err))
 
       } else {
-          api.changeLikeCardStatus(id, false)
-              .then((res) => {
-                  card.getLikesAmount(res);
-              })
-              .then(() => {
-                  card.likeCard()
-              })
-              .catch(err => console.log(err))
-      }}); //handleLikeClick
-const cardElement = card.createCard();
-return cardElement;
+        api.changeLikeCardStatus(id, false)
+          .then((res) => {
+            card.getLikesAmount(res);
+          })
+          .then(() => {
+            card.likeCard()
+          })
+          .catch(err => console.log(err))
+      }
+    }); //handleLikeClick
+  const cardElement = card.createCard();
+  return cardElement;
 };
 
 
